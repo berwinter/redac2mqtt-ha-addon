@@ -1,0 +1,29 @@
+---
+configuration:
+  device:
+    name: Device
+    description: >-
+      Send discovery messages to Home Assistant to
+      auto-generate devices and sensors.
+  meters:
+    name: Meters
+    description: >-
+      List of IDs of meters to track. Meter IDs are a 9
+      digit number. 
+  mqtt_broker_host:
+    name: MQTT Broker Hostname
+  mqtt_broker_username:
+    name: MQTT Broker Username
+  mqtt_broker_password:
+    name: MQTT Broker Password
+  mqtt_broker_port:
+    name: MQTT Broker Port
+  debug:
+    name: Debug
+    description: >-
+      Enable additional debugging messages in log file.
+  hass:
+    name: Home Assistant Discovery
+    description: >-
+      Send discovery messages to Home Assistant to
+      auto-generate devices and sensors.

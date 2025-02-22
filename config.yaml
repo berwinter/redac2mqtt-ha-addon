@@ -1,0 +1,35 @@
+name: "REDAC2MQTT Add-on"
+description: "REDAC2MQTT Add-on"
+version: "0.1.0"
+slug: "redac2mqtt"
+init: false
+uart: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+options:
+  device: ""
+  meters: 
+    ids: 
+      - 123456789 
+  mqtt_broker_host: ""
+  mqtt_broker_username: ""
+  mqtt_broker_password: ""
+  mqtt_broker_port: 1883
+  hass: true
+  debug: true
+schema:
+  device: device(subsystem=tty)
+  meters:
+    ids:
+      - "int(100000000,999999999)"
+  mqtt_broker_host: str
+  mqtt_broker_username: str
+  mqtt_broker_password: password
+  mqtt_broker_port: port
+  debug: bool
+  hass: bool
+services:
+  - mqtt:need
